@@ -17,3 +17,6 @@ When run from Terminal, the program prompts for a number of files. This must be 
 ## Output
 <strong>test_peers.py</strong> outputs a pipe-delimited .csv (with all averages computed and comments concatenated) as <strong>evals_out.csv</strong><br>
 The result can be read easily into LibreOffice Calc for reference by grading spreadsheets.
+
+## Licence
+Licensed under GPL 3.0 <a>https://www.gnu.org/licenses/gpl-3.0.html</a>
