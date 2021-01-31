@@ -62,12 +62,18 @@ if input("Will your surveys have Lickert questions?\n(e.g. 'Rate the student on 
             Lscale = int(input("Enter the scale of your Lickert questions\nFor example: '3' = 3-point, '5' = 5-point, '7' = 7-point, etc.:\n"))
             if Lscale < 1 :
                 print("Error: Scale must be a positive integer.")
-                if input("Try again? (y/n)\n") == "y" : continue
-            break
+                if input("Try again? (y/n)\n") == "y" :
+                    continue
+                else :
+                    Lickert = False
+                    break
         except :
             print("Error: Scale must be a positive integer.")
-            if input("Try again? (y/n)\n") == "y" : continue
-            break
+            if input("Try again? (y/n)\n") == "y" :
+                continue
+            else :
+                Lickert = False
+                break
 
 print("Lickert scale set to %d-point scale." % Lscale)
 
