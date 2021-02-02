@@ -67,6 +67,8 @@ if input("Will your surveys have Lickert questions?\n(e.g. 'Rate the student on 
                 else :
                     Lickert = False
                     break
+            print("Lickert scale set to %d-point scale." % Lscale)
+            break
         except :
             print("Error: Scale must be a positive integer.")
             if input("Try again? (y/n)\n") == "y" :
@@ -75,14 +77,12 @@ if input("Will your surveys have Lickert questions?\n(e.g. 'Rate the student on 
                 Lickert = False
                 break
 
-print("Lickert scale set to %d-point scale." % Lscale)
-
 ### Set Lickert labels
 if Lickert == True :
     Llabels = list()
     for i in range(Lscale) :
         Llabels.append(input("Enter the label for level %d on your Lickert scale.\n(e.g. 'Poor', 'Good', 'Excellent', etc.)\n" % (i + 1)))
-Llabels.reverse()
+    Llabels.reverse()
 
 ## Check for Written responses
 if input("Will your surveys have written response questions?\n(e.g. 'Describe how the student made a positive contribution to the group.')? (y/n)\n") == "y" : Written = True
